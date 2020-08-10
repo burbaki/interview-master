@@ -16,6 +16,7 @@ import forex.services.rates.interpreters.OneFrame._
 import io.chrisdavenport.log4cats.Logger
 import io.circe.generic.JsonCodec
 import io.circe.generic.extras.{ ConfiguredJsonCodec, JsonKey }
+import io.circe.generic.extras.defaults.defaultGenericConfiguration
 import org.http4s.Status.Successful
 import org.http4s._
 import org.http4s.client._
