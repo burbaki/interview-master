@@ -6,12 +6,12 @@ import cats.Applicative
 import cats.effect.IO
 import cats.syntax.applicative._
 import cats.syntax.either._
-import forex.domain.{ Currency, Price, Rate }
+import forex.domain.{Currency, Price, Rate}
 import forex.programs.RatesProgram
 import forex.programs.rates.errors.Error.ValidationError
 import forex.services.rates.ServiceAlgebra
 import forex.services.rates.errors.ServiceError
-import forex.validation.{ simpleValidation, ValidationService }
+import forex.validation.{ValidationService, simpleValidation}
 import org.scalatest.GivenWhenThen
 import org.scalatest.funsuite.AnyFunSuite
 import org.scalatest.matchers.should.Matchers

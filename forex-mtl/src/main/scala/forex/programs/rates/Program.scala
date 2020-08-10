@@ -9,8 +9,8 @@ import forex.services.RatesService
 import forex.validation.ValidationService
 
 class Program[F[_]: Monad](
-                            ratesService: RatesService[F],
-                            validation: ValidationService,
+    ratesService: RatesService[F],
+    validation: ValidationService,
 ) extends ProgramAlgebra[F] {
 
   override def get(request: Protocol.GetRatesRequest): F[Error Either Rate] =
@@ -24,7 +24,7 @@ class Program[F[_]: Monad](
 object Program {
 
   def apply[F[_]: Monad](
-                          ratesService: RatesService[F],
-                          validation: ValidationService,
+      ratesService: RatesService[F],
+      validation: ValidationService,
   ): ProgramAlgebra[F] = new Program[F](ratesService, validation)
 }

@@ -6,7 +6,7 @@ import cats.syntax.flatMap._
 import forex.http.rates.Protocol.GetApiResponse._
 import forex.programs.RatesProgram
 import forex.programs.rates.errors.Error
-import forex.programs.rates.{ Protocol => RatesProgramProtocol }
+import forex.programs.rates.{Protocol => RatesProgramProtocol}
 import io.circe.Encoder
 import org.http4s.HttpRoutes
 import org.http4s.dsl.Http4sDsl

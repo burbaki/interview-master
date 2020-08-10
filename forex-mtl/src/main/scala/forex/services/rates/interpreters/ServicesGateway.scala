@@ -9,7 +9,7 @@ import forex.cache.rates.StorageAlgebra
 import forex.cache.rates.errors.NotFoundPair
 import forex.domain.Rate
 import forex.services.rates.errors.ServiceError
-import forex.services.rates.{ errors, ServiceAlgebra }
+import forex.services.rates.{ServiceAlgebra, errors}
 import io.chrisdavenport.log4cats.Logger
 
 import scala.concurrent.duration.Duration

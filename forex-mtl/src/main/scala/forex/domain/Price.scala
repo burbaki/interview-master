@@ -1,7 +1,7 @@
 package forex.domain
 
-import io.circe.{Decoder, Encoder}
 import io.circe.generic.extras.semiauto.{deriveUnwrappedDecoder, deriveUnwrappedEncoder}
+import io.circe.{Decoder, Encoder}
 
 case class Price(value: BigDecimal) extends AnyVal
 

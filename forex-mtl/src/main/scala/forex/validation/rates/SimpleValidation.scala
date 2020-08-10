@@ -2,8 +2,8 @@ package forex.validation.rates
 
 import forex.domain.Currency
 import forex.programs.rates.errors.Error.ValidationError
-import forex.programs.rates.{ errors, Protocol }
-import forex.validation.rates.validators.{ validateStringLength, validateStringsNonEqual }
+import forex.programs.rates.{Protocol, errors}
+import forex.validation.rates.validators.{validateStringLength, validateStringsNonEqual}
 
 class SimpleValidation(whitelist: List[Currency]) extends ValidationAlgebra {
 

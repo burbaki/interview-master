@@ -1,7 +1,7 @@
 package forex
 
-import cats.effect.{ Concurrent, Timer }
-import forex.cache.rates.{ InMemoryStorage, StorageAlgebra }
+import cats.effect.{Concurrent, Timer}
+import forex.cache.rates.{InMemoryStorage, StorageAlgebra}
 import forex.config.ApplicationConfig
 import forex.http.rates.RatesHttpRoutes
 import forex.programs._
@@ -13,7 +13,7 @@ import io.chrisdavenport.log4cats.Logger
 import org.http4s._
 import org.http4s.client.Client
 import org.http4s.implicits._
-import org.http4s.server.middleware.{ AutoSlash, Timeout }
+import org.http4s.server.middleware.{AutoSlash, Timeout}
 
 class Module[F[_]: Concurrent: Timer: Logger](client: Client[F], config: ApplicationConfig) {
 

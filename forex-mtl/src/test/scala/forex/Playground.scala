@@ -3,9 +3,7 @@ package forex
 import java.time.OffsetDateTime
 
 import forex.domain.{Currency, Price}
-import forex.http._
 import io.circe.Decoder
-
 import io.circe.generic.semiauto.deriveDecoder
 import io.circe.parser._
 
@@ -52,8 +50,8 @@ object Playground extends App {
       timestamp: OffsetDateTime
   )
 
-
-  import io.circe._, io.circe.parser._
+  import io.circe._
+  import io.circe.parser._
 
   val json1: String = """
 {
@@ -67,13 +65,17 @@ object Playground extends App {
 }
 } """
 
-  val doc: Json = parse(json1).getOrElse(Json.Null)
+  val doc: Json       = parse(json1).getOrElse(Json.Null)
   val cursor: HCursor = doc.hcursor
 
   val nameResult =
-    cursor.withFocus(_.mapObject{ x =>
-      val value = x("name")
-  value.map(x.add("timestamp212", _)).getOrElse(x)}).top.get
+    cursor
+      .withFocus(_.mapObject { x =>
+        val value = x("name")
+        value.map(x.add("timestamp212", _)).getOrElse(x)
+      })
+      .top
+      .get
 
-  println(nameResult  )
+  println(nameResult)
 }

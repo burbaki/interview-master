@@ -5,11 +5,11 @@ import java.time.OffsetDateTime
 import cats.effect._
 import forex.TestUtils
 import forex.config.ClientConfig
-import forex.domain.{ Currency, Price, Rate }
+import forex.domain.{Currency, Price, Rate}
 import forex.http._
-import forex.services.rates.errors.Error.{ ClientResponseParseError, LookupFailed, WrongUri }
+import forex.services.rates.errors.Error.{ClientResponseParseError, LookupFailed, WrongUri}
 import forex.services.rates.interpreters.OneFrame._
-import forex.services.rates.{ errors, Interpreters }
+import forex.services.rates.{Interpreters, errors}
 import io.chrisdavenport.log4cats.Logger
 import io.chrisdavenport.log4cats.slf4j.Slf4jLogger
 import org.http4s._

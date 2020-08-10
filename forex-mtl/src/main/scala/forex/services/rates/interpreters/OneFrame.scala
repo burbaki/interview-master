@@ -7,15 +7,15 @@ import cats.effect.Sync
 import cats.effect.concurrent.Ref
 import cats.implicits._
 import forex.config.ClientConfig
-import forex.domain.{ Currency, Price, Rate }
+import forex.domain.{Currency, Price, Rate}
 import forex.http._
 import forex.services.rates.ServiceAlgebra
-import forex.services.rates.errors.Error.{ ClientResponseParseError, LookupFailed, WrongUri }
+import forex.services.rates.errors.Error.{ClientResponseParseError, LookupFailed, WrongUri}
 import forex.services.rates.errors._
 import forex.services.rates.interpreters.OneFrame._
 import io.chrisdavenport.log4cats.Logger
 import io.circe.generic.JsonCodec
-import io.circe.generic.extras.{ ConfiguredJsonCodec, JsonKey }
+import io.circe.generic.extras.{ConfiguredJsonCodec, JsonKey}
 import io.circe.generic.extras.defaults.defaultGenericConfiguration
 import org.http4s.Status.Successful
 import org.http4s._

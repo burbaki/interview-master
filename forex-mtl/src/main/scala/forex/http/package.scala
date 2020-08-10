@@ -3,9 +3,9 @@ package forex
 import cats.effect.Sync
 import io.circe.generic.extras.decoding.EnumerationDecoder
 import io.circe.generic.extras.encoding.EnumerationEncoder
-import io.circe.{ Decoder, Encoder }
-import org.http4s.{ EntityDecoder, EntityEncoder }
+import io.circe.{Decoder, Encoder}
 import org.http4s.circe._
+import org.http4s.{EntityDecoder, EntityEncoder}
 
 package object http {
 

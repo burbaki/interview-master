@@ -1,8 +1,8 @@
 package forex.domain
 
 import cats.Show
-import io.circe.{Decoder, Encoder}
 import io.circe.generic.extras.semiauto._
+import io.circe.{Decoder, Encoder}
 
 case class Currency(value: String) extends AnyVal
 

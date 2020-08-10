@@ -4,9 +4,9 @@ import java.time.OffsetDateTime
 
 import cats.effect.IO
 import forex.TestUtils
-import forex.cache.rates.{ InMemoryStorage, StorageAlgebra }
+import forex.cache.rates.{InMemoryStorage, StorageAlgebra}
 import forex.config.ClientConfig
-import forex.domain.{ Currency, Price, Rate }
+import forex.domain.{Currency, Price, Rate}
 import forex.http._
 import forex.services.rates.Interpreters
 import forex.services.rates.interpreters.OneFrame.OneFrameResponse
@@ -14,7 +14,7 @@ import forex.services.rates.interpreters.ServicesGateway
 import io.chrisdavenport.log4cats.Logger
 import io.chrisdavenport.log4cats.slf4j.Slf4jLogger
 import org.http4s.headers.Accept
-import org.http4s.{ Headers, MediaType, Request, Response, Status, _ }
+import org.http4s.{Headers, MediaType, Request, Response, Status, _}
 import org.scalatest.GivenWhenThen
 import org.scalatest.funsuite.AnyFunSuite
 import org.scalatest.matchers.should.Matchers
